@@ -1,0 +1,28 @@
+{
+  "name": "knzk.css",
+  "version": "1.0.0",
+  "description": "A Custom-CSS packs of OBS for noisy broadcasting",
+  "author": "nzws <git@nzws.me>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint:css": "stylelint **/*.scss",
+    "lint:md": "prettier --check \"**/*.md\"",
+    "lint:json": "prettier --check \"**/*.json\"",
+    "lint": "npm-run-all lint:* -s",
+    "format:css": "stylelint --fix **/*.scss && prettier --write \"**/*.scss\"",
+    "format:md": "prettier --write \"**/*.md\"",
+    "format:json": "prettier --write \"**/*.json\"",
+    "format": "npm-run-all format:* -s",
+    "build": "parcel build src/index.scss -d dist/ --no-source-maps",
+    "watch": "parcel src/index.scss -d dist/"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5",
+    "parcel-bundler": "1.12.3",
+    "prettier": "1.18.2",
+    "sass": "^1.21.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}
