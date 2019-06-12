@@ -1,5 +1,7 @@
 body.fullwidth {
   background: transparent;
+  margin: 5px;
+
   @extend .font;
 
   #ad-middle,
@@ -10,12 +12,14 @@ body.fullwidth {
   .name,
   .dropdown,
   .premium,
+  .alert,
   td.img {
     display: none;
   }
 
   * {
     color: #fff !important;
+
     @extend .textStroke;
   }
 
