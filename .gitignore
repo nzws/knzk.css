@@ -61,3 +61,8 @@ typings/
 .next
 
 .cache
+
+dist
+
+.idea
+.vscode
