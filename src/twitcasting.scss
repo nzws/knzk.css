@@ -1,33 +1,35 @@
-body.fullwidth {
+.tw-page.tw-comment-window-page {
   background: transparent;
-  margin: 5px;
+  margin: 10px;
+  padding: 0;
 
-  @extend .font;
+  .comment-text {
+    @extend .font, .textStroke;
 
-  #ad-middle,
-  #loadmore,
-  .tw-player-page__comment__post,
-  .tw-player-page__component__title,
-  .comment-time,
-  .name,
-  .dropdown,
-  .premium,
-  .alert,
-  td.img {
+    color: #fff !important;
+  }
+
+  #tcx_commentwindowheader_pc_responsive,
+  > br,
+  .user {
     display: none;
   }
 
-  * {
-    color: #fff !important;
+  #comment > tr {
+    animation: comment_animation 0.75s cubic-bezier(0.6, -0.2, 0.7, 0.05)
+    reverse;
+  }
+}
 
-    @extend .textStroke;
+
+// Thank you @haritaso <3
+@keyframes comment_animation {
+  0% {
+    opacity: 1;
   }
 
-  td.comment {
-    border-top: none;
-  }
-
-  div#content {
-    margin-top: 0;
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
 }
